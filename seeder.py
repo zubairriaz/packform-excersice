@@ -72,7 +72,10 @@ def read_csv_and_insert_data():
     #some loop or function according to your requiremennt
     # Define columns for table
     for column in columns:
-      sqlQueryCreate += column + " VARCHAR(64),\n"
+      if column == 'id' or column == 'order_id' or column == 'company_id' or column == 'order_item_id':
+        sqlQueryCreate += column + " INTEGER,\n"
+      else:
+        sqlQueryCreate += column + " VARCHAR(64),\n"
     sqlQueryCreate = sqlQueryCreate[:-2]
     sqlQueryCreate += ");"
 
