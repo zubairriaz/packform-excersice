@@ -29,7 +29,7 @@ if not os.path.exists(path):
 PORT = os.getenv("PORT")
 PASSWORD = os.getenv("PASSWORD")
 USER = os.getenv("USER")
-DBNAME = 'packform_test'
+DBNAME = os.getenv("DBNAME")
 
 # Connect to PostgreSQL DBMS
 
