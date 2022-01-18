@@ -34,9 +34,9 @@ git clone https://github.com/zubairriaz/packform-excersice
 ```
 
 
-# Create .env file at the root of the project with the following variables
+### 1 - Create .env file at the root of the project with the following variables
 
-# Config
+#### Config
 
 Environmental variables
 
@@ -45,39 +45,22 @@ Environmental variables
 - `USER` - User of the postgress sql
 - `DBNAME` - Name of the DB by which you want the Db to be created or the already existent DB name
 
-### Optional User Sign-In Feature
+### 2 - Download python dependencies by running `pip install -r requirements.txt`
 
-The application can be configured with an optional user sign-in feature which uses Azure Active Directory as an identity platform. This uses wrapper & helper libraries from https://github.com/benc-uk/msal-graph-vue
+### 3 - Run seeder.py file by executing the command `python seeder.py` in the terminal
 
-If you wish to enable this, carry out the following steps:
+### 4 - Now Open the Server folder and download all dependencies using the command `go get -d ./...`
 
-- Register an application with Azure AD, [see these steps](https://github.com/benc-uk/msal-graph-vue#set-up--deployment)
-- Set the environmental variable `AUTH_CLIENT_ID` on the Go server, with the value of the client id. This can be done in the `.env` file if working locally.
-- _Optional_ when testing/debugging the Vue.js SPA without the Go server, you can place the client-id in `.env.development` under the value `VUE_APP_AUTH_CLIENT_ID`
+### 5 Now go the the frontend folder and download all dependencies by executing the command `npm install`
 
-# GitHub Actions CI/CD
+### Now start the server by executing the command `go run main.go app.go` from the server folder this will start the server at http://localhost:8001
 
-A working set of CI and CD release GitHub Actions workflows are provided `.github/workflows/`, automated builds are run in GitHub hosted runners
+### Now start the front end by executing the command `npm run server`
 
-### [GitHub Actions](https://github.com/benc-uk/vuego-demoapp/actions)
-
-[![](https://img.shields.io/github/workflow/status/benc-uk/vuego-demoapp/CI%20Build%20App)](https://github.com/benc-uk/vuego-demoapp/actions?query=workflow%3A%22CI+Build+App%22)
-
-[![](https://img.shields.io/github/workflow/status/benc-uk/vuego-demoapp/CD%20Release%20-%20AKS?label=release-kubernetes)](https://github.com/benc-uk/vuego-demoapp/actions?query=workflow%3A%22CD+Release+-+AKS%22)
+## This will start the project at http://localhost:8080/ but due to google chrome security issues we cannot access the API from
 
 
-[![](https://img.shields.io/github/last-commit/benc-uk/vuego-demoapp)](https://github.com/benc-uk/vuego-demoapp/commits/master)
 
-## Updates
+   
 
-| When       | What                                                 |
-| ---------- | ---------------------------------------------------- |
-| Nov 2021   | Rewrite for Vue.js 3, new look & feel, huge refactor |
-| Mar 2021   | Auth using MSAL.js v2 added                          |
-| Mar 2021   | Refresh, makefile, more tests                        |
-| Nov 2020   | New pipelines & code/ API robustness                 |
-| Dec 2019   | Github Actions and AKS                               |
-| Sept 2019  | New release pipelines and config moved to env vars   |
-| Sept 2018  | Updated with weather API and weather view            |
-| July 2018  | Updated Vue CLI config & moved to Golang 1.11        |
-| April 2018 | Project created                                      |
+
