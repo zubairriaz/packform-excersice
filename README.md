@@ -34,7 +34,7 @@ git clone https://github.com/zubairriaz/packform-excersice
 ```
 
 
-### 1 - Create .env file at the root of the project with the following variables
+### 1 - There is a .env file at the root of the project with the following variables
 
 #### Config
 
@@ -44,6 +44,8 @@ Environmental variables
 - `PASSWORD` - Password of the postgress sql
 - `USER` - User of the postgress sql
 - `DBNAME` - Name of the DB by which you want the Db to be created or the already existent DB name
+
+   #### Assign appropriate values to the variables
 
 ### 2 - Download python dependencies by running `pip install -r requirements.txt`
 
