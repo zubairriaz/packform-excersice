@@ -51,13 +51,22 @@ Environmental variables
 
 ### 4 - Now Open the Server folder and download all dependencies using the command `go get -d ./...`
 
-### 5 Now go the the frontend folder and download all dependencies by executing the command `npm install`
+### 5 - Now go the the frontend folder and download all dependencies by executing the command `npm install`
 
-### Now start the server by executing the command `go run main.go app.go` from the server folder this will start the server at http://localhost:8001
+### 6- Now start the server by executing the command `go run main.go app.go` from the server folder this will start the server at http://localhost:8001
 
-### Now start the front end by executing the command `npm run server`
+### 7- Now start the front end by executing the command `npm run server`
 
-## This will start the project at http://localhost:8080/ but due to google chrome security issues we cannot access the API from
+### 8- This will start the project at http://localhost:8080/ but due to google chrome security issues we cannot access the API from our front end due to CORS issue so to test the app close all chrome windows and follow these steps
+1-Right click on desktop, add new shortcut
+2-Add the target as "[PATH_TO_CHROME]\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp
+3-Click OK.
+
+### 9- Now open the chrome from the shortcut you have created on desktop and access http://localhost:8080/
+
+
+
+
 
 
 
