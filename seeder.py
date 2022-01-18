@@ -74,6 +74,8 @@ def read_csv_and_insert_data():
     for column in columns:
       if column == 'id' or column == 'order_id' or column == 'company_id' or column == 'order_item_id':
         sqlQueryCreate += column + " INTEGER,\n"
+      elif column == 'created_at':
+        sqlQueryCreate += column + " TimeStamp,\n"
       else:
         sqlQueryCreate += column + " VARCHAR(64),\n"
     sqlQueryCreate = sqlQueryCreate[:-2]
