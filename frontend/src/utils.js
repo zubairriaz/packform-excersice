@@ -41,7 +41,7 @@ export const AXIOS = axios.create({
 
 export const RECORDS_PER_PAGE = 5;
 
-const formatTime = ({ value }) => {
+export const formatTime = ({ value }) => {
   let dateTime = new Date(value);
   return dateTime.toLocaleTimeString([], {
     month:"short",
@@ -57,7 +57,7 @@ const formatter = new Intl.NumberFormat('en-US', {
   currency: 'AUD',
 });
 
-const formatAmount = ({ value }) => {
+export const formatAmount = ({ value }) => {
   return value ? formatter.format(value) : "N/A";
 };
 
